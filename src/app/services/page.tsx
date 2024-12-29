@@ -15,7 +15,6 @@ const Service: NextPage = () => {
     "firebase",
     "vercel",
     "git",
-    "jira",
     "github",
     "visualstudiocode",
     "androidstudio",
