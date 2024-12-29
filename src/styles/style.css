@@ -421,8 +421,8 @@ select {
   text-align: center;
 }
 .home .intro img {
-  width: 500px;
-  height: 500px;
+ max-width: 100%;
+ height: auto;
   border-radius: 10%;
   display: inline-block;
   border: 8px solid #ffffff;
