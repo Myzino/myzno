@@ -414,15 +414,43 @@ select {
 ====================================================*/
 .home {
   min-height: 100vh;
-  display: -ms-flexbox;
   display: flex;
+ 
+  overflow: hidden; /* Ensure the animation stays within the section */
 }
+
+.cursor-animation {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(0, 242, 255, 0.5), transparent 80%);
+  pointer-events: none;
+  filter: blur(10px);
+  animation: wave 1.5s ease-out forwards;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
 .home .intro {
   text-align: center;
 }
 .home .intro img {
- max-width: 100%;
- height: auto;
+  max-width: 100%;
+  height: auto;
   border-radius: 10%;
   display: inline-block;
   border: 8px solid #ffffff;

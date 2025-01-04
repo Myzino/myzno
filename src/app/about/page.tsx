@@ -1,6 +1,7 @@
 import { DATA } from "@/app/data/dummys";
 import { FlipWords } from "@/components/ui/flip-words";
 import type { NextPage } from "next";
+import Image from "next/image";
 
 const About: NextPage = () => {
   const words = ["Web Developer", "Troubleshooter", "IoT-Driven Technology Lover", "Custom Web Designer"];
@@ -70,7 +71,7 @@ With certifications like TOPCIT and Cyberthreat Management under my belt, I cont
                         target="_target"
                         className="btn"
                       >
-                        Download CV
+                        Download Resume
                       </a>
                     </div>
                   </div>
@@ -124,7 +125,7 @@ With certifications like TOPCIT and Cyberthreat Management under my belt, I cont
                             Bukidnon State University (Bachelor of Science in Information Technology)
                           </h4>
                           <p className="timeline-text">
-                            immerse in ML models and also had a vast knowledge in Nextjs 
+                            I am currently studying Bachelor of Science in Information Technology at Bukidnon State University. I am in my 4th year and will soon be Graduating. i am immerse in Web development and IoT Technologies  and Have an experience in Deep Learning Classification
                           </p>
                         </div>
                         {/* Timeline Item end */}
@@ -132,15 +133,13 @@ With certifications like TOPCIT and Cyberthreat Management under my belt, I cont
                         <div className="timeline-item">
                           <div className="circle-dot" />
                           <h6 className="timeline-date">
-                            <i className="fa fa-calendar" /> 2019 to Present
+                            <i className="fa fa-calendar" /> 2019 to 2021
                           </h6>
                           <h4 className="timeline-title">
-                            Diploma in Civil Engineering
+                           N/A
                           </h4>
                           <p className="timeline-text">
-                            From 2019 I started my journey to be a Civil
-                            Engineer on Shyamoli Ideal Polytechnic Institute. It
-                            still Running to Present.
+                            Adding this  on a later date
                           </p>
                         </div>
                         {/* Timeline Item end */}
@@ -151,12 +150,10 @@ With certifications like TOPCIT and Cyberthreat Management under my belt, I cont
                             <i className="fa fa-calendar" /> 2014 to 2019
                           </h6>
                           <h4 className="timeline-title">
-                            Secondary School Certificate
+                            N/A
                           </h4>
                           <p className="timeline-text">
-                            In 2019 I passed SSC Exam from Science Group with
-                            GPA- 4.56. My school name was Patgram Anath Bondhu
-                            Govt. High School.
+                            Adding this on the later date
                           </p>
                         </div>
                         {/* Timeline Item end */}
@@ -165,48 +162,17 @@ With certifications like TOPCIT and Cyberthreat Management under my belt, I cont
                   </div>
                 </div>
                 <div className="experience padd-15">
-                  <h3 className="title">Experience</h3>
+                  <h3 className="title">Bukidnon State University</h3>
                   <div className="row">
                     <div className="timeline-box padd-15">
                       <div className="timeline shadow-dark">
                         {/* Timeline Item */}
-                        <div className="timeline-item">
-                          <div className="circle-dot" />
-                          <h6 className="timeline-date">
-                            <i className="fa fa-calendar" /> 2021 to Present
-                          </h6>
-                          <h4 className="timeline-title">wala pa</h4>
-                          <p className="timeline-text">
-                           atats
-                          </p>
-                        </div>
-                        {/* Timeline Item end */}
-                        {/* Timeline Item */}
-                        <div className="timeline-item">
-                          <div className="circle-dot" />
-                          <h6 className="timeline-date">
-                            <i className="fa fa-calendar" /> 2020 to Present
-                          </h6>
-                          <h4 className="timeline-title">Web Design</h4>
-                          <p className="timeline-text">
-                            Since 2020 I started to learn Coding. I have learn
-                            Html, Css, Sass, JavaScript, Bootstrap. Now I am a
-                            Professional Web Designer..
-                          </p>
-                        </div>
-                        {/* Timeline Item end */}
-                        {/* Timeline Item */}
-                        <div className="timeline-item">
-                          <div className="circle-dot" />
-                          <h6 className="timeline-date">
-                            <i className="fa fa-calendar" /> 2020 to Present
-                          </h6>
-                          <h4 className="timeline-title">Wordpress</h4>
-                          <p className="timeline-text">
-                            Since 2020 I started to learn Wordpress. I can
-                            install, Customize, &amp; fix bug on wordpress.{" "}
-                          </p>
-                        </div>
+                        <Image 
+                                            src="/imgs/blog/bsu.jpg" 
+                                            alt="Creative Slideshow" 
+                                            width={500} 
+                                            height={400} 
+                                          />
                         {/* Timeline Item end */}
                       </div>
                     </div>
