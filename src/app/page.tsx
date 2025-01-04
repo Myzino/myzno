@@ -1,9 +1,29 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [waveColor, setWaveColor] = useState("rgba(255, 0, 0, 0.4)"); // Initial color
+
+  useEffect(() => {
+    const colors = [
+      "rgba(255, 0, 0, 0.4)", // Red
+      "rgba(0, 255, 0, 0.4)", // Green
+      "rgba(0, 0, 255, 0.4)", // Blue
+      "rgba(238, 130, 238, 0.4)", // Violet
+    ];
+    let colorIndex = 0;
+
+  
+    const colorChangeInterval = setInterval(() => {
+      colorIndex = (colorIndex + 1) % colors.length;
+      setWaveColor(colors[colorIndex]);
+    }, 5000);
+
+    return () => clearInterval(colorChangeInterval);
+  }, []);
+
   useEffect(() => {
     const homeSection = document.getElementById("home");
 
@@ -13,11 +33,13 @@ export default function Home() {
         wave.className = "cursor-animation";
         wave.style.left = `${x}px`;
         wave.style.top = `${y}px`;
+        wave.style.background = `radial-gradient(circle, ${waveColor}, transparent 70%)`;
         homeSection.appendChild(wave);
 
+     
         setTimeout(() => {
           homeSection.removeChild(wave);
-        }, ); 
+        }, 2000); 
       };
 
       const handleMouseMove = (e: MouseEvent) => {
@@ -30,19 +52,20 @@ export default function Home() {
         homeSection.removeEventListener("mousemove", handleMouseMove);
       };
     }
-  }, []);
+  }, [waveColor]); 
 
   return (
     <main>
       <section className="home section" id="home">
         <div className="container">
           <div className="intro">
-          <Image
-           src="/imgs/wow.jpg"
-          alt="Jeffrey Sedoro"
-          className="shadow-dark"
-          width={500}
-          height={400}/>
+            <Image
+              src="/imgs/wow.jpg"
+              alt="Jeffrey Sedoro"
+              className="shadow-dark"
+              width={500}
+              height={400}
+            />
             <h1>Jeffrey Sedoro</h1>
             <p>
               A Bachelor of Science in Information Technology student with a
