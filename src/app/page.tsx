@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
 
         setTimeout(() => {
           homeSection.removeChild(wave);
-        }, 500); 
+        }, ); 
       };
 
       const handleMouseMove = (e: MouseEvent) => {
@@ -36,11 +37,12 @@ export default function Home() {
       <section className="home section" id="home">
         <div className="container">
           <div className="intro">
-            <img
-              src="/imgs/wow.jpg"
-              alt="Jeffrey Sedoro Profile"
-              className="shadow-dark"
-            />
+          <Image
+           src="/imgs/wow.jpg"
+          alt="Jeffrey Sedoro"
+          className="shadow-dark"
+          width={500}
+          height={400}/>
             <h1>Jeffrey Sedoro</h1>
             <p>
               A Bachelor of Science in Information Technology student with a
