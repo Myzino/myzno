@@ -2,10 +2,15 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
 export default function Home() {
   const [waveColor, setWaveColor] = useState("rgba(255, 0, 0, 0.4)"); // Initial color
-
+  const [ count, setCount] = useState(0);
+  useEffect(()=>{
+    const repeat = setInterval(()=>{
+      setCount(prev => prev + 1)
+    }, 1000);
+    return () => clearInterval(repeat);
+  }, []);
   useEffect(() => {
     const colors = [
       "rgba(255, 0, 0, 0.4)", // Red
@@ -67,6 +72,7 @@ export default function Home() {
               height={400}
             />
             <h1>Jeffrey Sedoro</h1>
+            <button onClick={() => setCount(prev => prev + 1 )}>Click Me {count}</button>
             <p>
               A Bachelor of Science in Information Technology student with a
               passion for building innovative systems and bridging the gap
@@ -78,6 +84,7 @@ export default function Home() {
               exploring emerging technologies, diving into creative pursuits,
               and envisioning a future where I can design systems that inspire
               and innovate. Let’s collaborate to bring ideas to life!
+              
             </p>
             <div className="social-links">
               <a href="https://x.com/Jepriii08" target="_blank">

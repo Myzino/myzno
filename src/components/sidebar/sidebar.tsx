@@ -19,12 +19,11 @@ const Sidebar = () => {
   return (
     <aside className={`aside ${open ? "open" : ""}`}>
       <div onClick={handleOpen} className="nav-toggler">
-        <span />
       </div>
       <div className="aside-inner">
         <div className="logo">
           <Link href="/" onClick={handleClose}>
-            Portfolio
+            J.Sedoro
           </Link>
         </div>
         <ul className="nav">

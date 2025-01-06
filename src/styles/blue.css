@@ -1,11 +1,11 @@
-.aside .logo a::before{
-    border-top: 4px solid #2196f3;
-    border-left: 4px solid #2196f3;
-}    
-.aside .logo a::after{
-    border-right: 4px solid #2196f3;
-    border-bottom: 4px solid #2196f3;
-} 
+.aside .logo a::before {
+  border-top: 4px solid #f321e9;
+  border-left: 4px solid #f321e9;
+}
+.aside .logo a::after {
+  border-right: 4px solid #f321e9;
+  border-bottom: 4px solid #f321e9;
+}
 .contact .contact-info-item .icon .fa,
 .blog .blog-item-inner .blog-info .blog-tags a,
 .lightbox .lightbox-controls .prev-item .fa,
@@ -18,8 +18,8 @@ body.dark .portfolio .portfolio-filter button.active,
 body.dark .aside .nav li a:hover,
 body.dark .aside .nav li a.active,
 .aside .nav li a:hover,
-.aside .nav li a.active{
-    color: #2196f3;
+.aside .nav li a.active {
+  color: #f321e9;
 }
 .blog .blog-item-inner .blog-img .blog-date,
 .service .service-item .service-item-inner:hover .icon,
@@ -28,14 +28,14 @@ body.dark .aside .nav li a.active,
 .about .about-content .skills .skill-item .progress .progress-in,
 .btn,
 .section-title h2::after,
-.section-title h2::before,   
+.section-title h2::before,
 .aside .nav-toggler span,
 .aside .nav-toggler span::before,
 .aside .nav-toggler span::after,
-.home .intro .social-links a{
-    background-color: #f321e9;
+.home .intro .social-links a {
+  background-color: #f321e9;
 }
 
-.portfolio .portfolio-filter button.active{
-    border-color: #2196f3;
+.portfolio .portfolio-filter button.active {
+  border-color: #f321e9;
 }

@@ -26,13 +26,13 @@ const Service: NextPage = () => {
   <div className="container">
     <div className="row">
       <div className="section-title padd-15">
-        <h2>Skills</h2><br />
+        <h2>Skills</h2>
         <p>Throughout college, I honed my skills in web development, custom web design, and logo designing, enabling me to create functional websites, tailor unique designs, and craft impactful brand identities. </p>
       </div>
       
     </div>
     <div className="row">
-    <div className="service-item padd-15">
+    <div className="service-item  padd-15">
         <div className="service-item-inner">
           <div className="icon"><i className="fa fa-code" /></div>
           <h4>Web Development</h4>
@@ -66,7 +66,7 @@ const Service: NextPage = () => {
     </div>
     <div className="row">
       <div className="section-title padd-15">
-        <h2>Tools i use</h2><br />
+        <h2>Tools i use</h2>
         <p>
         Throughout my work, I have utilized a wide range of tools to build scalable web applications, design custom interfaces, manage projects, and streamline development processes effectively.</p>
         </div>

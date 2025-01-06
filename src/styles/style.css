@@ -98,6 +98,13 @@ select {
   max-width: 100%;
   margin-bottom: 60px;
 }
+.section-title p {
+  color: #302e4d;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  margin-top: 20px;
+  position: relative;
+}
 .section-title h2 {
   font-size: 40px;
   color: #302e4d;
@@ -296,7 +303,7 @@ select {
   overflow-y: auto;
 }
 .aside .logo {
-  padding: 30px 0;
+  padding: 40px 0;
 }
 .aside .logo a {
   font-size: 40px;
@@ -310,16 +317,16 @@ select {
 }
 .aside .logo a::before {
   content: "";
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
   position: absolute;
   top: 0;
   left: 0;
 }
 .aside .logo a::after {
   content: "";
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1162,6 +1169,7 @@ select {
 [data-theme="dark"] .about .about-content .personal-info .info-item p,
 [data-theme="dark"] .about .about-content .about-text h2,
 [data-theme="dark"] .section-title h2,
+[data-theme="dark"] .section-title p,
 [data-theme="dark"] .home .intro h1,
 [data-theme="dark"] .aside .copyright,
 [data-theme="dark"] .aside .logo a,
@@ -1192,7 +1200,7 @@ select {
   border-color: #393939;
 }
 
-[data-theme="dark"] .contact .contact-form .form-item input::placeholder,
+[data-theme="dark"] .contact .contact-form .form-item input::pl aceholder,
 [data-theme="dark"] .contact .contact-form .form-item textarea::placeholder {
   color: #fff;
   opacity: 0.8;
