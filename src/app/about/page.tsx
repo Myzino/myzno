@@ -19,14 +19,18 @@ const About: NextPage = () => {
   useEffect(() => {
     const progressElements = document.querySelectorAll(".progress-in");
     progressElements.forEach((el) => {
-      const targetWidth = el.getAttribute("data-progress");
-      el.style.setProperty("--progress-width", targetWidth);
-      el.style.width = "0"; // Start the animation from 0
-      setTimeout(() => {
-        el.style.width = targetWidth; // Animate to the target width
-      }, 300); // Small delay to allow for the CSS animation
+      const element = el as HTMLElement; // Cast to HTMLElement
+      const targetWidth = element.getAttribute("data-progress");
+      if (targetWidth) {
+        element.style.setProperty("--progress-width", targetWidth);
+        element.style.width = "0"; // Start the animation from 0
+        setTimeout(() => {
+          element.style.width = targetWidth; // Animate to the target width
+        }, 100); // Add a small delay to allow the animation to trigger
+      }
     });
   }, []);
+
 
   return (
     <main>
