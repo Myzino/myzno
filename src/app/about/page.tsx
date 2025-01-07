@@ -67,8 +67,8 @@ With certifications like TOPCIT and Cyberthreat Management under my belt, I cont
                   <div className="row">
                     <div className="buttons padd-15">
                       <a
-                        href="/assets/docs/resume.pdf"
-                        target="_target"
+                        href="/resume.pdf" // Path relative to the public folder
+                        download="Jeffrey Sedoro Resume.pdf" // Optional: Rename the file during download
                         className="btn"
                       >
                         Download Resume
