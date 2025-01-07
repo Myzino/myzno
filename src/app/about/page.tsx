@@ -35,7 +35,7 @@ With certifications like TOPCIT and Cyberthreat Management under my belt, I cont
                   <div className="row">
                     <div className="info-item padd-15">
                       <p>
-                        Website : <span>{DATA.website || "https://example.com"}</span>
+                        Website : <span>{DATA.website || "https://myzno.vercel.app/"}</span>
                       </p>
                     </div>
                     <div className="info-item padd-15">
