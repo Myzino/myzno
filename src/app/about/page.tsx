@@ -60,7 +60,7 @@ With certifications like TOPCIT and Cyberthreat Management under my belt, I cont
                     </div>
                     <div className="info-item padd-15">
                       <p>
-                        Freelance : <span>Available</span>
+                        Availability : <span>Available</span>
                       </p>
                     </div>
                   </div>
