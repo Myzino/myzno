@@ -26,7 +26,7 @@ const About: NextPage = () => {
         element.style.width = "0"; // Start the animation from 0
         setTimeout(() => {
           element.style.width = targetWidth; // Animate to the target width
-        }, 100); // Add a small delay to allow the animation to trigger
+        }, 500); // Add a small delay to allow the animation to trigger
       }
     });
   }, []);
