@@ -585,13 +585,24 @@ select {
 .about .about-content .skills .skill-item {
   margin-bottom: 30px;
 }
+@keyframes progressAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
 .about .about-content .skills .skill-item .progress .progress-in {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   border-radius: 4px;
+  animation: progressAnimation 1.5s ease-in-out forwards;
 }
+
 .about .about-content .skills .skill-item .skill-percent {
   /* display: none; */
   line-height: 40px;

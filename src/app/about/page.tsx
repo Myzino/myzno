@@ -1,13 +1,33 @@
 "use client";
+
 import { DATA } from "@/app/data/dummys";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { FlipWords } from "@/components/ui/flip-words";
 import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const About: NextPage = () => {
-  const words = ["Web Developer", "Troubleshooter", "IoT-Driven Technology Lover", "Custom Web Designer"];
+  const words = [
+    "Web Developer",
+    "Troubleshooter",
+    "IoT-Driven Technology Lover",
+    "Custom Web Designer",
+  ];
+
+  useEffect(() => {
+    const progressElements = document.querySelectorAll(".progress-in");
+    progressElements.forEach((el) => {
+      const targetWidth = el.getAttribute("data-progress");
+      el.style.setProperty("--progress-width", targetWidth);
+      el.style.width = "0"; // Start the animation from 0
+      setTimeout(() => {
+        el.style.width = targetWidth; // Animate to the target width
+      }, 300); // Small delay to allow for the CSS animation
+    });
+  }, []);
+
   return (
     <main>
       <section className="about section" id="about">
@@ -22,15 +42,23 @@ const About: NextPage = () => {
               <div className="row">
                 <div className="about-text padd-15">
                   <h2>
-                    I am Jeffrey a <FlipWords words={words} />
+                    I am Jeffrey, a <FlipWords words={words} />
                   </h2>
                   <p>
-                  I am a Bachelor of Science in Information Technology student passionate about building innovative systems and exploring IoT technologies. My projects focus on combining system development with cutting-edge solutions, such as RFID-based access control systems.
-
-With certifications like TOPCIT and Cyberthreat Management under my belt, I continuously strive to enhance my skills and stay ahead of tech trends. When I’m not coding, I enjoy diving into new technologies and brainstorming impactful solutions. Let’s collaborate to create something extraordinary!
+                    I am a Bachelor of Science in Information Technology student
+                    passionate about building innovative systems and exploring
+                    IoT technologies. My projects focus on combining system
+                    development with cutting-edge solutions, such as RFID-based
+                    access control systems.
                   </p>
-                  <div>
-                  </div>
+                  <p>
+                    With certifications like TOPCIT and Cyberthreat Management
+                    under my belt, I continuously strive to enhance my skills
+                    and stay ahead of tech trends. When I’m not coding, I enjoy
+                    diving into new technologies and brainstorming impactful
+                    solutions. Let’s collaborate to create something
+                    extraordinary!
+                  </p>
                 </div>
               </div>
               <div className="row">
@@ -48,7 +76,7 @@ With certifications like TOPCIT and Cyberthreat Management under my belt, I cont
                     </div>
                     <div className="info-item padd-15">
                       <p>
-                        Degree : <span>BSIT(undergraduate)</span>
+                        Degree : <span>BSIT (undergraduate)</span>
                       </p>
                     </div>
                     <div className="info-item padd-15">
@@ -70,8 +98,8 @@ With certifications like TOPCIT and Cyberthreat Management under my belt, I cont
                   <div className="row">
                     <div className="buttons padd-15">
                       <a
-                        href="/resume.pdf" // Path relative to the public folder
-                        download="Jeffrey Sedoro Resume.pdf" // Optional: Rename the file during download
+                        href="/resume.pdf"
+                        download="Jeffrey Sedoro Resume.pdf"
                         className="btn"
                       >
                         Download Resume
@@ -82,30 +110,46 @@ With certifications like TOPCIT and Cyberthreat Management under my belt, I cont
                 <div className="skills padd-15">
                   <div className="row">
                     <div className="skill-item padd-15">
-                      <h5>Nextjs</h5>
+                      <h5>Next.js</h5>
                       <div className="progress">
-                        <div className="progress-in" style={{ width: "90%",  backgroundColor: "grey" }} />
+                        <div
+                          className="progress-in"
+                          data-progress="90%"
+                          style={{ backgroundColor: "grey" }}
+                        />
                         <div className="skill-percent">90%</div>
                       </div>
                     </div>
                     <div className="skill-item padd-15">
                       <h5>Laravel</h5>
                       <div className="progress">
-                        <div className="progress-in" style={{ width: "86%", backgroundColor: "red" }} />
+                        <div
+                          className="progress-in"
+                          data-progress="86%"
+                          style={{ backgroundColor: "red" }}
+                        />
                         <div className="skill-percent">86%</div>
                       </div>
                     </div>
                     <div className="skill-item padd-15">
                       <h5>React</h5>
                       <div className="progress">
-                        <div className="progress-in " style={{ width: "80%",  backgroundColor: "blue" }} />
+                        <div
+                          className="progress-in"
+                          data-progress="80%"
+                          style={{ backgroundColor: "blue" }}
+                        />
                         <div className="skill-percent">80%</div>
                       </div>
                     </div>
                     <div className="skill-item padd-15">
                       <h5>Python</h5>
                       <div className="progress">
-                        <div className="progress-in" style={{ width: "80%",  backgroundColor: "yellow" }} />
+                        <div
+                          className="progress-in"
+                          data-progress="80%"
+                          style={{ backgroundColor: "yellow" }}
+                        />
                         <div className="skill-percent">80%</div>
                       </div>
                     </div>
@@ -118,8 +162,7 @@ With certifications like TOPCIT and Cyberthreat Management under my belt, I cont
                   <div className="row">
                     <div className="timeline-box padd-15">
                       <div className="timeline shadow-dark">
-                        {/* Timeline Item */}
-                        <div className="timeline-item">
+                      <div className="timeline-item">
                           <div className="circle-dot" />
                           <h6 className="timeline-date">
                             <i className="fa fa-calendar" /> 2021 to Present
@@ -159,38 +202,32 @@ With certifications like TOPCIT and Cyberthreat Management under my belt, I cont
                             Adding this on the later date
                           </p>
                         </div>
-                        {/* Timeline Item end */}
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="experience padd-15">
-                  <h3 className="title">Bukidnon State University</h3>
+                  <h3 className="title">Experience</h3>
                   <div className="row">
                     <div className="timeline-box padd-15">
                       <div className="timeline shadow-dark">
-                        {/* Timeline Item */}
-                        <CardContainer className="inter-var">
-      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-       
-      
-        <CardItem translateZ="100" className="w-full mt-4">
-            <Link href="https://buksu.edu.ph/" target="_blank">
-              <Image
-                src="/imgs/blog/bsu.jpg"
-                alt="Bukidnon State University"
-                width={500}
-                height={400}
-              />
-            </Link>
-        </CardItem>
-        <div className="flex justify-between items-center mt-20">
-        
-         
-        </div>
-      </CardBody>
-    </CardContainer>
-                        {/* Timeline Item end */}
+                        <CardContainer>
+                          <CardBody>
+                            <CardItem translateZ="100">
+                              <Link
+                                href="https://buksu.edu.ph/"
+                                target="_blank"
+                              >
+                                <Image
+                                  src="/imgs/blog/bsu.jpg"
+                                  alt="Bukidnon State University"
+                                  width={500}
+                                  height={400}
+                                />
+                              </Link>
+                            </CardItem>
+                          </CardBody>
+                        </CardContainer>
                       </div>
                     </div>
                   </div>
