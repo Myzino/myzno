@@ -346,7 +346,7 @@ export default function Home() {
               software to meet real-world challenges. Beyond coding, I enjoy
               exploring emerging technologies, diving into creative pursuits,
               and envisioning a future where I can design systems that inspire
-              and innovate. Let's collaborate to bring ideas to life!
+              and innovate. Let&aqos;s collaborate to bring ideas to life!
             </p>
             <div className="social-links">
               <a href="https://x.com/Jepriii08" target="_blank" rel="noopener noreferrer">
