@@ -326,7 +326,7 @@ export default function Home() {
         <div className="container">
           <div className="intro">
             <Image
-              src="/imgs/wow.jpg"
+              src="/imgs/avatar.png"
               alt="Jeffrey Sedoro"
               className="shadow-dark"
               width={300}
